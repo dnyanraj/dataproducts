@@ -16,7 +16,12 @@ shinyUI(fluidPage(
       
       sliderInput("range", 
                   label = "Range of interest:",
-                  min = 0, max = 100, value = c(0, 100))
+                  min = 0, max = 100, value = c(0, 100)),
+      
+      br(),
+      br(),
+      
+      p("Source code at my ", a("Github Repo.", href = "https://github.com/dnyanraj/dataproducts/tree/master/censusApp"))
       ),
     
     mainPanel(plotOutput("map"))
