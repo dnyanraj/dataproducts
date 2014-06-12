@@ -24,7 +24,12 @@ shinyUI(fluidPage(
         value = FALSE),
       
       checkboxInput("adjust", 
-        "Adjust prices for inflation", value = FALSE)
+        "Adjust prices for inflation", value = FALSE),
+      
+      br(),
+      br(),
+      
+      p("Source code at my ", a("Github Repo.", href = "https://github.com/dnyanraj/dataproducts/tree/master/stockVis"))
     ),
     
     mainPanel(plotOutput("plot"))
