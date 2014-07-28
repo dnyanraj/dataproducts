@@ -1,0 +1,88 @@
+{
+ "name": "India",
+ "children": [
+  {
+   "name": "Manpower",
+   "children": [
+    {"name": "Total Population: 1,220,800,359"},
+    {"name": "Available Manpower: 615,201,057"},
+    {"name": "Fit for Service: 489,571,520"},
+    {"name": "Reaching Military Age Anually: 22,869,956"},
+    {"name": "Active Frontline Personnel: 1,325,000"},
+    {"name": "Active Reserve Personnel: 2,143,000"}
+   ]
+  },
+  {
+   "name": "Land Systems",
+   "children": [
+    {"name": "Tanks: 3,569"},
+    {"name": "Armored Fighting Vehicles (AFVs): 5,085"},
+    {"name": "Self Powered Guns (SPGs): 290"},
+    {"name": "Towed-Artillery: 6445"},
+    {"name": "Multiple-Launch Rocket Systems (MLRSs): 292"}
+   ]
+  },
+  {
+   "name": "Air Power",
+   "children": [
+    {"name": "Total Aircraft: 1,785"},
+    {"name": "Fighters/Interceptors: 535"},
+    {"name": "Fixed-Wing Attack Aircraft: 468"},
+    {"name": "Transport Aircraft: 706"},
+    {"name": "Trainer Aircraft: 237"},
+    {"name": "Helicopters: 504"},
+    {"name": "Attack Helicopters: 20"}
+   ]
+  },
+  {
+   "name": "Naval Power",
+   "children": [
+    {"name": "Total Naval Strength: 184"},
+    {"name": "Aircraft Carriers: 2"},
+    {"name": "Frigates: 15"},
+    {"name": "Destroyers: 11"},
+    {"name": "Corvettes: 24"},
+    {"name": "Submarines: 17"},
+    {"name": "Coastal defense Craft: 32"},
+    {"name": "Mine Warfare: 7"}
+   ]
+  },
+  {
+   "name": "Resources (Petroleum)",
+   "children": [
+    {"name": "Oil Production: 879,500 bbl/day"},
+    {"name": "Oil Consumption: 3,200,000 bbl/day"},
+    {"name": "Proven Oil Reserves: 5,476,000,000 bbl/day"}
+   ]
+  },
+  {
+   "name": "Logistics",
+   "children": [
+    {"name": "Labor Force: 482,300,000"},
+    {"name": "Merchant Marine Strength: 340"},
+    {"name": "Major Ports and Terminals: 7"},
+    {"name": "Roadway Coverage: 3,320,410"},
+    {"name": "Railway Coverage: 63,974"},
+    {"name": "Serviceable Airports: 346"}
+   ]
+  },
+  {
+   "name": "Financial (in USD)",
+   "children": [
+    {"name": "Defense Budget: 46,000,000,000"},
+    {"name": "External Debt: 378,900,000,000"},
+    {"name": "Reserves of Foreign Exchange and Gold: 297,800,000,000"},
+    {"name": "Purchasing Power Parity: 4,716,000,000,000"}
+   ]
+  },
+  {
+   "name": "Geography (in KM)",
+   "children": [
+    {"name": "Square Land Area: 3,287,263"},
+    {"name": "Coastline: 7,000"},
+    {"name": "Shared Border: 14,103"},
+    {"name": "Waterways: 14,500"}
+   ]
+  }
+ ]
+}
