@@ -74,7 +74,7 @@ var tooltip = d3.select("body").append("div")
   .attr("class", "tooltip")               
   .style("opacity", 0);
 
-d3.csv("data.csv", type, function(error, data) {
+var myChart = d3.csv("data.csv", type, function(error, data) {
   x.domain(data.map(function(d) { return d.name; }));
   y.domain([0, d3.max(data, function(d) { return d.value; })]);
 
@@ -93,27 +93,39 @@ d3.csv("data.csv", type, function(error, data) {
       .attr("class", "y axis")
       .call(yAxis);
 
+  //intro animation
   chart.selectAll(".bar")
       .data(data)
     .enter().append("rect")
       .attr("class", "bar")
       .attr("x", function(d) { return x(d.name); })
-      .attr("y", function(d) { return y(d.value); })
-      .attr("height", function(d) { return height - y(d.value); })
+      .attr("height", 0)
+      .attr("y", height)
       .attr("width", x.rangeBand())
-      .on("mouseover", function(d) {      
-              tooltip.transition()        
-                  .duration(500)      
-                  .style("opacity", .9);      
-              tooltip.html("<strong>Total Passengers: " + d.value + "</strong>")  
-                  .style("left", (d3.event.pageX) + "px")     
-                  .style("top", (d3.event.pageY - 28) + "px");    
-          })                  
-          .on("mouseout", function(d) {       
-              tooltip.transition()        
-                  .duration(500)      
-                  .style("opacity", 0);   
-          });
+      .transition()
+        .attr("height", function(d) { return height - y(d.value); })
+        .attr("y", function(d) { return y(d.value); })
+        .delay(function(d,i){
+          return  i*20;
+          })
+        .duration(1000)
+        .ease('elastic');
+    
+  chart.selectAll(".bar")
+    .on("mouseover", function(d) {      
+            tooltip.transition()        
+                .duration(500)      
+                .style("opacity", .9);      
+            tooltip.html("<strong>Total Passengers: " + d.value + "</strong>")  
+                .style("left", (d3.event.pageX) + "px")     
+                .style("top", (d3.event.pageY - 28) + "px");    
+        })                  
+        .on("mouseout", function(d) {       
+            tooltip.transition()        
+                .duration(500)      
+                .style("opacity", 0);   
+        });
+      
 });
 
 function type(d) {
